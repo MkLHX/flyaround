@@ -10,12 +10,16 @@
                 <td>{{ reservation.id }}</td>
             </tr>
             <tr>
-                <th>Name</th>
-                <td>{{ reservation.name }}</td>
+                <th>Nbreservedseats</th>
+                <td>{{ reservation.nbReservedSeats }}</td>
             </tr>
             <tr>
-                <th>Nbseats</th>
-                <td>{{ reservation.nbSeats }}</td>
+                <th>Publicationdate</th>
+                <td>{% if reservation.publicationDate %}{{ reservation.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Wasdone</th>
+                <td>{% if reservation.wasDone %}Yes{% else %}No{% endif %}</td>
             </tr>
         </tbody>
     </table>

@@ -29,7 +29,7 @@
 !bin/symfony_requirements
 /vendor/
 
-# Assets and user uploads
+# Assets and User uploads
 /web/bundles/
 /web/uploads/
 
@@ -44,7 +44,7 @@
 /composer.phar
 
 # Backup entities generated with doctrine:generate:entities command
-**/Entity/*~
+src/AppBundle/Entity/*~
 
 # Embedded web-server pid file
 /.web-server-pid
@@ -55,3 +55,5 @@ vendor
 app/cache
 app/logs
 web/build/
+
+docker-compose.yml

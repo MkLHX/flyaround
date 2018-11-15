@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>PlaneModel list</h1>
+    <h1>Planemodels list</h1>
 
     <table>
         <thead>
@@ -10,8 +10,8 @@
                 <th>Model</th>
                 <th>Manufacturer</th>
                 <th>Cruisespeed</th>
-                <th>Nbseats</th>
-                <th>Status</th>
+                <th>Planenbseats</th>
+                <th>Isavailable</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -22,8 +22,8 @@
                 <td>{{ planeModel.model }}</td>
                 <td>{{ planeModel.manufacturer }}</td>
                 <td>{{ planeModel.cruiseSpeed }}</td>
-                <td>{{ planeModel.nbSeats }}</td>
-                <td>{{ planeModel.status }}</td>
+                <td>{{ planeModel.planeNbSeats }}</td>
+                <td>{{ planeModel.isAvailable }}</td>
                 <td>
                     <ul>
                         <li>
@@ -41,7 +41,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('planemodel_new') }}">Create a new entry</a>
+            <a href="{{ path('planemodel_new') }}">Create a new planeModel</a>
         </li>
     </ul>
 {% endblock %}

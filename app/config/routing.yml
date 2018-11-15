@@ -1,6 +1,31 @@
-wcs_coav:
-    resource: "@WCSCoavBundle/Resources/config/routing.yml"
+app_site:
+    resource: "@AppBundle/Controller/SiteController.php"
+    type:     annotation
+
+app_user:
+    resource: "@AppBundle/Controller/UserController.php"
+    type:     annotation
+
+app_review:
+    resource: "@AppBundle/Controller/ReviewController.php"
+    type:     annotation
+
+app_plane_model:
+    resource: "@AppBundle/Controller/PlaneModelController.php"
+    type:     annotation
+
+app_reservation:
+    resource: "@AppBundle/Controller/ReservationController.php"
+    type:     annotation
+
+app_flight:
+    resource: "@AppBundle/Controller/FlightController.php"
+    type:     annotation
+
+app:
+    resource: "@AppBundle/Controller"
     prefix:   /
+    type: annotation
 
 admin:
     resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'

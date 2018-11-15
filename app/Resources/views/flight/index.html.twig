@@ -1,17 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Flight list</h1>
+    <h1>Flights list</h1>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Departure</th>
-                <th>Arrival</th>
-                <th>Pilot</th>
-                <th>Freeseats</th>
+                <th>Nbfreeseats</th>
+                <th>Seatprice</th>
                 <th>Takeoftime</th>
+                <th>Publicationdate</th>
+                <th>Description</th>
+                <th>Wasdone</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -19,11 +20,12 @@
         {% for flight in flights %}
             <tr>
                 <td><a href="{{ path('flight_show', { 'id': flight.id }) }}">{{ flight.id }}</a></td>
-                <td>{{ flight.departure }}</td>
-                <td>{{ flight.arrival }}</td>
-                <td>{{ flight.pilot }}</td>
-                <td>{{ flight.freeSeats }}</td>
-                <td>{% if flight.takeofTime %}{{ flight.takeofTime|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ flight.nbFreeSeats }}</td>
+                <td>{{ flight.seatPrice }}</td>
+                <td>{% if flight.takeOfTime %}{{ flight.takeOfTime|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if flight.publicationDate %}{{ flight.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ flight.description }}</td>
+                <td>{% if flight.wasDone %}Yes{% else %}No{% endif %}</td>
                 <td>
                     <ul>
                         <li>
@@ -41,7 +43,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('flight_new') }}">Create a new entry</a>
+            <a href="{{ path('flight_new') }}">Create a new flight</a>
         </li>
     </ul>
 {% endblock %}

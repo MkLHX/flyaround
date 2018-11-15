@@ -10,24 +10,28 @@
                 <td>{{ flight.id }}</td>
             </tr>
             <tr>
-                <th>Departure</th>
-                <td>{{ flight.departure }}</td>
+                <th>Nbfreeseats</th>
+                <td>{{ flight.nbFreeSeats }}</td>
             </tr>
             <tr>
-                <th>Arrival</th>
-                <td>{{ flight.arrival }}</td>
-            </tr>
-            <tr>
-                <th>Pilot</th>
-                <td>{{ flight.pilot }}</td>
-            </tr>
-            <tr>
-                <th>Freeseats</th>
-                <td>{{ flight.freeSeats }}</td>
+                <th>Seatprice</th>
+                <td>{{ flight.seatPrice }}</td>
             </tr>
             <tr>
                 <th>Takeoftime</th>
-                <td>{% if flight.takeofTime %}{{ flight.takeofTime|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if flight.takeOfTime %}{{ flight.takeOfTime|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Publicationdate</th>
+                <td>{% if flight.publicationDate %}{{ flight.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ flight.description }}</td>
+            </tr>
+            <tr>
+                <th>Wasdone</th>
+                <td>{% if flight.wasDone %}Yes{% else %}No{% endif %}</td>
             </tr>
         </tbody>
     </table>

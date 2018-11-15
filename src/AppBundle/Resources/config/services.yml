@@ -1,0 +1,46 @@
+services:
+
+    app.admin.site:
+        class: AppBundle\Admin\SiteAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Site", label: "Site" }
+        arguments:
+            - ~
+            - AppBundle\Entity\Site
+            - ~
+
+    app.admin.flight:
+        class: AppBundle\Admin\FlightAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Vol", label: "Flight" }
+        arguments:
+            - ~
+            - AppBundle\Entity\Flight
+            - ~
+
+    app.admin.planemodel:
+        class: AppBundle\Admin\PlaneModelAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Avion", label: "PlaneModel" }
+        arguments:
+            - ~
+            - AppBundle\Entity\PlaneModel
+            - ~
+
+    app.admin.reservation:
+        class: AppBundle\Admin\ReservationAdmin
+        tags:
+            -  { name: sonata.admin, manager_type: orm, group: "Reservation", label: "Reservation" }
+        arguments:
+            - ~
+            - AppBundle\Entity\Reservation
+            - ~
+
+    app.admin.user:
+        class: AppBundle\Admin\UserAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Passager", label: "User" }
+        arguments:
+            - ~
+            - AppBundle\Entity\User
+            - ~
