@@ -182,15 +182,6 @@ class PlaneModel
         return $this->planeModels;
     }
 
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->planeModels = new ArrayCollection();
-    }
-
     /**
      * Add planeModel.
      *
